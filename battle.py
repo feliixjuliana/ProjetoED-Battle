@@ -1,7 +1,6 @@
 import random
 import time
 
-# ---------- PILHA DA PROFESSORA ----------
 class Stack:
     def __init__(self):
         self.items = []
@@ -101,7 +100,6 @@ class Personagem:
     def esta_vivo(self):
         return self.hp > 0
 
-# ---------- ÁRVORE DE DECISÃO ----------
 class NoDecisao:
     def __init__(self, condicao=None, acao=None, ramo_verdadeiro=None, ramo_falso=None):
         self.condicao = condicao
@@ -117,7 +115,6 @@ class NoDecisao:
         else:
             return self.ramo_falso.decidir(inimigo, jogador)
 
-# ---------- CLASSE INIMIGO ----------
 class Inimigo:
     def __init__(self, nome, hp, ataque, defesa):
         self.personagem = Personagem(nome, hp, ataque, defesa)
@@ -163,7 +160,6 @@ class Inimigo:
             self.personagem.usar_pocao(30, historico)
             self.pocoes -= 1
 
-# ---------- CLASSE JOGADOR ----------
 class Jogador:
     def __init__(self, nome, hp, ataque, defesa):
         self.personagem = Personagem(nome, hp, ataque, defesa)
@@ -193,7 +189,6 @@ class Jogador:
                 time.sleep(1)
                 historico.registrar(f"{self.personagem.nome} tentou usar poção, mas não tinha mais.")
 
-# ---------- INÍCIO DO JOGO ----------
 jogador = Jogador(nome="Herói", hp=100, ataque=20, defesa=10)
 inimigo = Inimigo(nome="Goblin", hp=80, ataque=15, defesa=8)
 historico = HistoricoAcoes()
