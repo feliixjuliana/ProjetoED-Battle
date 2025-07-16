@@ -181,14 +181,14 @@ class Jogador:
         print(f"\n--- Seu Turno — \nEscolha sua ação:\n1. Atacar\n2. Defender\n3. Usar Poção ({self.pocoes} restantes)")
 
         escolha = ""
-        while escolha not in ["1", "2", "3"]:
-            escolha = input("Digite o número da sua escolha: ")
+        while escolha not in [1, 2, 3]:
+            escolha = int(input("Digite o número da sua escolha: "))
 
-        if escolha == "1":
+        if escolha == 1:
             self.personagem.atacar(inimigo.personagem, historico)
-        elif escolha == "2":
+        elif escolha == 2:
             self.personagem.defender(historico)
-        elif escolha == "3":
+        elif escolha == 3:
             if self.pocoes > 0:
                 self.personagem.usar_pocao(40, historico)
                 self.pocoes -= 1
