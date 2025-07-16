@@ -43,7 +43,7 @@ cd ProjetoED-Battle
 ```
 
 ```bash
-python battle_game.py
+python battle.py
 ```
 
 ---
