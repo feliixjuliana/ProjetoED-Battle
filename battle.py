@@ -37,7 +37,7 @@ class HistoricoAcoes:
         size = self.pilha.size()
         for _ in range(min(n, size)):
             temp.append(self.pilha.pop())
-        print("\n📜 Últimas ações:")
+        print("\n Últimas ações:")
         for acao in temp:
             print("•", acao)
         for acao in reversed(temp):
@@ -120,7 +120,7 @@ class NoDecisao:
     def decidir(self, inimigo, jogador):
         if self.acao:
             return self.acao
-        if self.condicao(inimigo, jogador):
+        elif self.condicao(inimigo, jogador):
             return self.ramo_verdadeiro.decidir(inimigo, jogador)
         else:
             return self.ramo_falso.decidir(inimigo, jogador)
@@ -176,11 +176,7 @@ class Jogador:
         self.pocoes = 2
 
     def escolher_acao(self, inimigo, historico):
-        print("\n--- Seu Turno ---")
-        print("Escolha sua ação:")
-        print("1. Atacar")
-        print("2. Defender")
-        print(f"3. Usar Poção ({self.pocoes} restantes)")
+        print(f"\n--- Seu Turno — \nEscolha sua ação:\n1. Atacar\n2. Defender\n3. Usar Poção ({self.pocoes} restantes)")
 
         escolha = ""
         while escolha not in ["1", "2", "3"]:
