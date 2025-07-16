@@ -50,14 +50,14 @@ python battle_game.py
 
 ## 🧠 Desafios Enfrentados e Soluções
 
-* **Desafio:** Construção da árvore de decisão com ramificações lógicas funcionais.
-  **Solução:** Criamos a classe `NoDecisao` com atributos `condição`, `ação`, `ramo_verdadeiro` e `ramo_falso`, facilitando a montagem de decisões condicionais e reutilização da lógica.
+* **Desafio:** Repetição de declarações.
+  **Solução:** Uso de herança, onde o objeto inimigo e jogador herdaram características da classe Personagem, não precisando repetir e excesso de código.
 
-* **Desafio:** Integrar as decisões da IA ao fluxo do jogo sem travar a jogabilidade.
-  **Solução:** O método `decidir()` dentro da árvore retorna a ação a ser tomada, e o inimigo executa com base nesse retorno, mantendo o jogo fluido.
+* **Desafio:** Construção da lógica do inimigo e suas decisões.
+  **Solução:** Uso de árvore de decisão, assim como o `NoDecisao` para facilitar na montagem de ações de acordo com a condição atual do inimigo.
 
-* **Desafio:** Registro eficiente de ações.
-  **Solução:** Utilização da `Stack` para registrar e imprimir as últimas ações a cada turno.
+* **Desafio:** Registros das 5 últimas ações
+  **Solução:** Uso de pilha, `Stack()`, acessando apenas os últimos 5 valores do que armazenou ao longo da partida.
 
 ---
 
